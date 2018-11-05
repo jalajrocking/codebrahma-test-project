@@ -54,9 +54,10 @@ class MainComponent extends Component {
       let subStrRandSplitted = this.randSplitted[this.state.activeSubString].substring(0, this.randSplitted[0].length);
 
       if(event.charCode === 32) {
+        event.preventDefault();
         this.count++;
         this.setState({activeSubString: this.count})
-        this.rand_string.value = "";
+        this.rand_string.value = null;
       }
     }
   }
